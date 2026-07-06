@@ -28,7 +28,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
           <div className="flex size-9 items-center justify-center rounded-lg bg-primary-foreground/15">
             <Wallet className="size-5" aria-hidden="true" />
           </div>
-          <span className="text-lg font-semibold tracking-tight">FinControle</span>
+          <span className="text-lg font-semibold tracking-tight">Finora</span>
         </div>
 
         <div className="max-w-md">
@@ -58,7 +58,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
         </div>
 
         <p className="text-sm text-primary-foreground/70">
-          {"\u00A9"} {new Date().getFullYear()} FinControle. Todos os direitos
+          {"\u00A9"} {new Date().getFullYear()} Finora. Todos os direitos
           reservados.
         </p>
       </aside>
@@ -71,7 +71,7 @@ export function AuthShell({ children }: { children: ReactNode }) {
             <div className="flex size-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
               <Wallet className="size-5" aria-hidden="true" />
             </div>
-            <span className="text-lg font-semibold tracking-tight">FinControle</span>
+            <span className="text-lg font-semibold tracking-tight">Finora</span>
           </div>
           {children}
         </div>
