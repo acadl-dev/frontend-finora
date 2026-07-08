@@ -46,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="bg-background" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className="antialiased font-sans">
         <ThemeProvider
           attribute="class"
@@ -54,10 +54,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AppShell>{children}</AppShell>
+          {children}
         </ThemeProvider>
-        {process.env.NODE_ENV === 'production' && <Analytics />}
+
+        {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
-  )
+  );
 }
