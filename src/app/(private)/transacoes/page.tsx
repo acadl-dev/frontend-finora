@@ -1,5 +1,5 @@
 import { PageHeader } from '@/components/page-header'
-import { TransactionActions, TransactionsView } from '@/components/transacoes/transactions-view'
+import { TransactionActions, TransactionsView } from '@/components/transaction/transactions-view'
 
 export default function TransacoesPage() {
   return (

@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { signUp } from "@/lib/auth/auth-client"
+import { useRouter } from "next/navigation"
 
 //Regras para escolher a senha do usuário. Alinhar com a API:
 const passwordRules = [
@@ -26,8 +27,9 @@ export function SignupForm(){
     const [showPassword, setShowPassword] = useState(false)
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState<string | null>(null)
+    const router = useRouter()
     
-    async function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setError(null);
 
@@ -52,7 +54,8 @@ export function SignupForm(){
             setError(result.error)
             return
         }
-        // Sucesso: redirecione o usuário (ex.: router.push("/dashboard"))
+        router.push("/login") 
+        // ou "/dashboard" se optar por auto-login futuramente
     }
 
     
